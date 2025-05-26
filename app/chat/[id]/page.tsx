@@ -4,6 +4,7 @@ import { Message, useChat } from "@ai-sdk/react";
 import { ChatMessages } from "@/app/chat/[id]/chat-messages";
 import { ChatTextarea, ChatTextareaRef } from "@/app/chat/[id]/chat-textarea";
 import { useRef } from "react";
+import { useParams } from "next/navigation";
 
 const initialMessages: Message[] = [
   {
@@ -19,10 +20,14 @@ const initialMessages: Message[] = [
 ];
 
 const Page = () => {
+  const params = useParams<{ id: string }>();
   const ref = useRef<ChatTextareaRef>(null);
 
   const { messages, input, handleInputChange, handleSubmit } = useChat({
     initialMessages,
+    body: {
+      id: params.id,
+    },
     onError: (error) => {
       console.error(error);
     },
