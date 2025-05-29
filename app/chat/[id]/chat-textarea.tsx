@@ -79,7 +79,7 @@ export const ChatTextarea = React.forwardRef(function ChatTextarea(
             onSubmit();
           }
         }}
-        placeholder="여보세요?"
+        placeholder="질문을 클릭하거나, 채팅을 입력해주세요."
       />
       <Button
         ref={buttonRef}

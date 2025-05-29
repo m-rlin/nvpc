@@ -2,6 +2,8 @@ import React, { ForwardedRef, forwardRef, useImperativeHandle } from "react";
 import { Message } from "@ai-sdk/react";
 import { cn } from "@/utils/helpers";
 import { useScrollToBottom } from "@/app/chat/[id]/use-scroll-to-bottom";
+import Image from "next/image";
+import { CharacterId } from "@/app/characters";
 
 export type ChatMessagesRef = {
   scrollToBottom: () => void;
@@ -9,9 +11,11 @@ export type ChatMessagesRef = {
 
 export const ChatMessages = forwardRef(function ChatMessages(
   {
+    id,
     className,
     messages,
   }: {
+    id: CharacterId;
     className?: string;
     messages: Message[];
   },
@@ -35,7 +39,7 @@ export const ChatMessages = forwardRef(function ChatMessages(
       )}
     >
       {messages.map((message) => (
-        <ChatMessage key={message.id} message={message} />
+        <ChatMessage key={message.id} id={id} message={message} />
       ))}
       <div
         ref={messagesEndRef}
@@ -45,13 +49,26 @@ export const ChatMessages = forwardRef(function ChatMessages(
   );
 });
 
-const ChatMessage = ({ message }: { message: Message }) => {
+const ChatMessage = ({
+  id,
+  message,
+}: {
+  id: CharacterId;
+  message: Message;
+}) => {
   return (
     <div
       className="group/message mx-auto w-full max-w-3xl px-4"
       data-role={message.role}
     >
       <div className="flex w-full gap-4 group-data-[role=user]/message:ml-auto group-data-[role=user]/message:w-fit group-data-[role=user]/message:max-w-2xl">
+        <Image
+          className="size-16 rounded-xl group-data-[role=user]/message:hidden"
+          src={`/characters/${id}.webp`}
+          alt="Character Thumbnail"
+          width={512}
+          height={512}
+        />
         <div className="flex w-full flex-col gap-4">
           {message.parts?.map((part, index) => {
             const key = `${message.id}-${index}`;
@@ -70,33 +87,6 @@ const ChatMessage = ({ message }: { message: Message }) => {
                 </div>
               );
             }
-
-            if (
-              part.type === "tool-invocation" &&
-              part.toolInvocation.state === "result"
-            ) {
-              const args = part.toolInvocation.args;
-              const result = part.toolInvocation.result;
-              return (
-                <div key={key} className="space-y-2 rounded-xl bg-zinc-300 p-3">
-                  <div>{part.toolInvocation.toolName}</div>
-                  <div className="overflow-x-scroll">
-                    args
-                    <pre className="text-xs">
-                      {JSON.stringify(args, null, 2)}
-                    </pre>
-                  </div>
-                  <div className="overflow-x-scroll">
-                    result
-                    <pre className="text-xs">
-                      {JSON.stringify(result, null, 2)}
-                    </pre>
-                  </div>
-                </div>
-              );
-            }
-
-            return <div key={key}>{part.type}</div>;
           })}
         </div>
       </div>
