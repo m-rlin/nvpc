@@ -1,4 +1,3 @@
-import { Message } from "@ai-sdk/react";
 import { isCharacterId } from "@/app/characters";
 import { notFound } from "next/navigation";
 import { Chat } from "@/app/chat/[id]/chat";
