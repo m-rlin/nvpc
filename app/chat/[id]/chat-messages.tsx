@@ -4,6 +4,7 @@ import { cn } from "@/utils/helpers";
 import { useScrollToBottom } from "@/app/chat/[id]/use-scroll-to-bottom";
 import Image from "next/image";
 import { CharacterId } from "@/app/characters";
+import { Markdown } from "@/app/markdown";
 
 export type ChatMessagesRef = {
   scrollToBottom: () => void;
@@ -112,7 +113,7 @@ const ChatMessage = ({
                       "rounded-xl bg-zinc-900 px-3 py-2 text-white",
                   )}
                 >
-                  {part.text}
+                  <Markdown>{part.text}</Markdown>
                 </div>
               </div>
             );

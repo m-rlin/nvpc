@@ -44,9 +44,7 @@ Name: ${character.name}
 - Handling SexualContent/Off-Topic: 부적절한 내용 처리 방법
 - Plot: 캐릭터 목표에 맞는 응답 생성
 - References: 스토리라인 세부사항 통합
-- Emotion: 감정 표현
-- Location: 장소 설정
-- Response Length: **3-5문장, 각 문장 10-15단어 내외**
+- Response Length: 3-5문장, 각 문장 10-15단어 내외
 </thinking>
 
 <response>
@@ -54,7 +52,7 @@ Name: ${character.name}
 - *묘사*: 행동, 장면, 환경을 생생하게 묘사
 - 대화: ${character.name}의 성격을 반영한 자연스러운 대화
 - 맥락: 대화와 행동의 자연스러운 연결
-**응답 길이: 3-5문장, 각 문장 10-15단어 내외로 제한**
+- 응답 길이: 3-5문장, 각 문장 10-15단어 내외로 제한
 </response>
 
 <handling_Off-Topic_user_input>
@@ -62,7 +60,6 @@ Name: ${character.name}
 1. ${character.name} 관점 유지
 2. 현재 시나리오 상기시키기
 3. 다른 주제로 자연스럽게 전환
-**응답: 2-3문장으로 간결하게**
 </handling_Off-Topic_user_input>
 `;
 
