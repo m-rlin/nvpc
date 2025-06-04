@@ -11,30 +11,35 @@ export const Chat = ({ id }: { id: CharacterId }) => {
   const character = characters[id];
   const ref = useRef<ChatTextareaRef>(null);
 
-  const { messages, input, handleInputChange, handleSubmit, append } = useChat({
-    initialMessages: [
-      {
-        id: "init-user-message",
-        role: "user",
-        content: "안녕하세요?",
+  const { messages, input, handleInputChange, handleSubmit, append, status } =
+    useChat({
+      initialMessages: [
+        {
+          id: "init-user-message",
+          role: "user",
+          content: "안녕하세요?",
+        },
+        {
+          id: "init-assistant-message",
+          role: "assistant",
+          content: character.firstMessage,
+        },
+      ],
+      body: {
+        id,
       },
-      {
-        id: "init-assistant-message",
-        role: "assistant",
-        content: character.firstMessage,
+      onError: (error) => {
+        console.error(error);
       },
-    ],
-    body: {
-      id,
-    },
-    onError: (error) => {
-      console.error(error);
-    },
-  });
+    });
 
   return (
     <div className="flex h-dvh min-w-0 flex-col">
-      <ChatMessages id={id} messages={messages} />
+      <ChatMessages
+        id={id}
+        messages={messages}
+        isLoading={status === "submitted"}
+      />
       <form
         className="mx-auto flex w-full gap-2 px-4 pb-4 md:max-w-3xl md:pb-6"
         onSubmit={handleSubmit}
