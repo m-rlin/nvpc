@@ -1,36 +1,24 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+문항
 
-## Getting Started
+참전용사들이 우리나라를 위해 싸운 것을 알고 있다.
+전쟁으로 인해 많은 사람들이 고통받았다는 것을 이해한다.
+평화가 얼마나 소중한지 생각해 본 적이 있다.
+참전용사들의 희생 덕분에 지금의 평화가 유지된다고 느낀다.
+내가 사는 지역의 평화를 지키기 위해 할 수 있는 일이 있다고 생각한다.
+역사 수업을 통해 전쟁과 평화에 대해 배운 것이 중요하다고 생각한다.
+참전용사들에게 감사한 마음을 표현하고 싶다.
+친구들과 평화에 대해 이야기해본 적이 있다.
+평화를 위해 내가 노력해야 한다고 느낀다.
+앞으로도 평화를 지키기 위해 무엇을 할 수 있을지 고민해본 적이 있다.
+체크리스트 결과 해석
+8-10개 "네": 매우 높은 공감
 
-First, run the development server:
+당신은 참전용사의 희생과 한반도 평화에 대해 깊이 공감하고 있습니다. 이 주제에 대해 더 많이 배우고, 주변 사람들과 이야기하며 평화의 중요성을 널리 알리는 것이 좋습니다.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+5-7개 "네": 보통 정도의 공감
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+당신은 참전용사와 평화의 중요성을 어느 정도 이해하고 있습니다. 더 많은 정보와 경험을 통해 이 주제에 대한 공감을 더욱 깊게 할 수 있습니다. 친구들과 함께 평화에 대해 이야기해보는 것도 좋은 방법입니다.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+0-4개 "네": 낮은 공감
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+현재 참전용사와 한반도 평화에 대한 공감이 낮은 편입니다. 이 주제에 대해 더 많이 배우고 생각해보는 것이 필요합니다. 역사나 사회 수업을 통해 이들의 희생과 평화의 중요성을 이해하는 기회를 가져보세요.

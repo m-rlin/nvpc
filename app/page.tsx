@@ -4,12 +4,12 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="mx-auto max-w-4xl px-4">
-      <ul className="py-24 grid grid-cols-1 lg:grid-cols-3 gap-x-8 gap-y-16">
+    <div className="mx-auto max-w-4xl px-4 py-24">
+      <ul className="grid grid-cols-2 gap-x-8 gap-y-16 lg:grid-cols-3">
         {Object.entries(characters).map(([key, character]) => (
           <li key={key} className="relative">
             <Image
-              className="rounded-2xl object-cover aspect-3/2 w-full"
+              className="aspect-3/2 w-full rounded-2xl object-cover"
               src={`/characters/${key}.webp`}
               alt="Character Icon"
               width={512}
@@ -23,6 +23,12 @@ export default function Home() {
           </li>
         ))}
       </ul>
+      <Link
+        href="/test"
+        className="mt-24 flex w-fit items-center rounded-full bg-zinc-950 px-6 py-4 text-white"
+      >
+        공감점수 확인하기
+      </Link>
     </div>
   );
 }
