@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { characters } from "@/app/characters";
 import Link from "next/link";
+import { ArrowRightIcon } from "@heroicons/react/16/solid";
 
 export default function Home() {
   return (
@@ -25,9 +26,10 @@ export default function Home() {
       </ul>
       <Link
         href="/test"
-        className="mt-24 flex w-fit items-center rounded-full bg-zinc-950 px-6 py-4 text-white"
+        className="mt-24 flex w-fit items-center gap-2 rounded-full bg-zinc-950 px-6 py-4 text-3xl font-medium text-white"
       >
-        공감점수 확인하기
+        공감점수 확인하러 가기
+        <ArrowRightIcon className="size-8" />
       </Link>
     </div>
   );
